@@ -21,7 +21,7 @@ describe("alternate case tests", () => {
     expect(alternateCase("danie l.")).toBe("DaNiE l.");
   });
 
-  test.only("string containing capitals", () => {
+  test("string containing capitals", () => {
     expect(alternateCase("dEeeEEE")).toBe("DeEeEeE");
   });
 });

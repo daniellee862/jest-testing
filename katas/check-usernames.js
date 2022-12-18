@@ -6,6 +6,8 @@
   - is no longer than 20 characters
 */
 
+//THIS IS A REGEX KATA,
 function checkUsernames() {}
 
 module.exports = checkUsernames;
+console.log(sorted, array);

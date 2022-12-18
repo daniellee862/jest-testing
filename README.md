@@ -33,7 +33,7 @@ You are testing **'interfaces not implementations'** - you care only about what 
 - maxAndMin
 - sumArgs
 - sumAscii
-- getYearsOfGrowth
+- getYearsOfGrowth.
 
 ### Section 2
 
