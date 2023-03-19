@@ -1,6 +1,6 @@
 # Jest Testing
 
-The purpose of these exercises was to build on my TDD skills.
+The purpose of the exercises was to build on my TDD skills.
 
 The goal of my tests was to ensure my functions return the correct output when given a range of inputs.
 
