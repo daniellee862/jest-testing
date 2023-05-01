@@ -1,43 +1,60 @@
+
 # Jest Testing
 
-The purpose of the exercises was to build on my TDD skills.
+Looking for a fun and exciting way to improve your coding skills? Look no further than my Jest Testing project! 🚀
 
-The goal of my tests was to ensure my functions return the correct output when given a range of inputs.
+In this project, I've focused on honing my Test Driven Development (TDD) skills by testing a range of functions with different inputs. My goal was to ensure that each function returned the correct output when given a variety of inputs. 💯
 
-The most important thing to test is that my function behaves in the way it should! When I was confident my function behaves as any reasonable user would expect it to, I then consider **edge cases** where the function may have to deal with extreme, unexpected, unusual or incorrect inputs - but I focussed on the _'happy path'_ first!
+But that's not all! I've also made sure to consider edge cases where the function might have to deal with unexpected, unusual, or incorrect inputs. And by testing "interfaces not implementations," I focused on what my function returns when given some input, rather than trying to test what's happening inside the function or whether people are using it correctly. 🤓
 
-I tested **'interfaces not implementations'** - I cared only about what my function returns when given some input. I didn't try to test what exactly is happening inside the function or that people are using it in the correct way, I test that it returns the correct results for a range of different inputs.
+So whether you're a beginner or an experienced developer, you can use my project to sharpen your TDD skills and make sure your code is bug-free. And with functions like sumDigits, countVeg, and caesarCipher, you'll find plenty of examples to learn from. 🧐
 
-**Run `npm test` to run every test in the `__tests__` folder.**.
+Ready to start testing your code with Jest Testing? Simply run the "npm test" command to test every function in the tests folder. And if you need help getting started, I've included a helpful blog post by Eric Elliott and links to the Jest documentation to guide you along the way. 📖
 
-### Section 1
+Thank you for considering my Jest Testing project to improve your coding skills. Let's get testing! 💪
+## Documentation
 
-- sumDigits
-- countVeg
-- alternateCase
-- getCentury
-- areOrdered
-- checkUsernames
-- maxAndMin
-- sumArgs
-- sumAscii
-- getYearsOfGrowth.
+[Blog post by Eric Elliott](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
 
-### Section 2
+[Jest documentation](https://jestjs.io/docs/getting-started)
 
-- orderVeg
-- checkStudents
-- range
-- removeDuplicates
-- getDistinctLetters
-- getMostRepeated
-- mergeArrays
-- getFrequencies
-- lengthenDate
-- caesarCipher
 
-## Resources
+## Running Tests
 
-If you'd like a primer on Test Driven Development, read [this blog post by Eric Elliott](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d).
+To run tests, run the following command
 
-[Jest documentation](https://jestjs.io/docs/en/getting-started)
+```bash
+  npm run test
+```
+
+
+## Usage/Examples
+
+```javascript
+const checkStudents = require("../katas/check-students");
+
+describe("checkStudents", () => {
+    test("returns empty array when passed empty array", () => {
+        expect(checkStudents([])).toEqual([]);
+    });
+
+    test("returns false when passed array with 2 different cohorts", () => {
+        expect(checkStudents([{name: 'Ben', cohort: 'October'},
+        {name: 'Amanda', cohort: 'April'}], 'April')).toEqual(false);
+    });
+
+    test("returns true when passed array with 2 same cohorts", () => {
+        expect(checkStudents([{name: 'Amanda', cohort: 'April'},
+            {name: 'Matt', cohort: 'April'}], 'April')).toEqual(true);
+    });
+
+    test("returns false when passed array with multi cohorts", () => {
+        expect(checkStudents([{name: 'Ben', cohort: 'October'},
+            {name: 'Amanda', cohort: 'April'},
+            {name: 'Matt', cohort: 'April'},
+            {name: 'Daniel', cohort: 'November'},
+            {name: 'Dee', cohort: 'November'}], 'November')).toEqual(false);
+    });
+})
+```
+
