@@ -1,5 +1,5 @@
 
-# Jest Testing 🚀
+# Jest Testing 🤹‍♂️
 
 Test Driven Development (TDD) practice by testing a range of functions with different inputs. My goal was to ensure that each function returned the correct output when given a variety of inputs. 💯
 
